@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <!-- Camera preview -->
+    <androidx.camera.view.PreviewView
+            android:id="@+id/cameraPreview"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+
+    <ImageView
+            android:id="@+id/capturedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <SurfaceView
+            android:id="@+id/drawingOverlay"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+
+    <Button
+            android:id="@+id/setCornersBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set corners"
+            android:layout_centerInParent="true" />
+
+    <Button
+            android:id="@+id/changeImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:enabled="false"
+            android:text="Change image"
+            android:layout_centerInParent="true" />
+
+
+    <Button
+            android:id="@+id/startCapturingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:enabled="false"
+            android:text="Start capturing" />
+
+
+</FrameLayout>

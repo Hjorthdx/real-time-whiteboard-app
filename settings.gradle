@@ -1,0 +1,4 @@
+include ':lib_task_api'
+include ':app'
+rootProject.name = "whiteboardapp"
+include ':openCVLibrary3414'
