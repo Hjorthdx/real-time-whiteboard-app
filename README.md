@@ -1,3 +1,6 @@
+# Current Product Goal
+Introduce colors to the current implementation while enhancing performance to be real time (~30 fps).
+
 # Real Time Whiteboard App
 
 Android app that digitizes whiteboards and papers in real time developed as part of our bachelor project at AAU (BSc Software Engineering).
