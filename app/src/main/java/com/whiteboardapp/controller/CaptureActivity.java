@@ -64,6 +64,7 @@ public class CaptureActivity extends AppCompatActivity {
     private ImageView capturedImageView;
 
     @Override
+    @androidx.camera.core.ExperimentalGetImage
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_capture);
@@ -134,6 +135,7 @@ public class CaptureActivity extends AppCompatActivity {
     }
 
     // Attach behaviour to camera.
+    @androidx.camera.core.ExperimentalGetImage
     private void setupAndStartCamera() {
         // Get the singleton CameraProvider
         ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
@@ -153,6 +155,7 @@ public class CaptureActivity extends AppCompatActivity {
 
     }
 
+    @androidx.camera.core.ExperimentalGetImage
     private void bindUseCases(@NonNull ProcessCameraProvider cameraProvider) {
         // Select a camera.
         CameraSelector cameraSelector = new CameraSelector.Builder()
@@ -181,6 +184,7 @@ public class CaptureActivity extends AppCompatActivity {
     private int rounds = 0;
 
     // Use case for analyzing image.
+    @androidx.camera.core.ExperimentalGetImage
     private ImageAnalysis createAnalysisUseCase() {
         Size resolution = new Size(1280, 960);
 
@@ -220,6 +224,7 @@ public class CaptureActivity extends AppCompatActivity {
         return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
     }
 
+    @androidx.camera.core.ExperimentalGetImage
     @SuppressLint("UnsafeExperimentalUsageError")
     private void analyseImage(ImageProxy imageProxy) {
         if (imageProxy == null) {

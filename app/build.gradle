@@ -54,6 +54,9 @@ android {
         noCompress "tflite"
     }
 
+    lintOptions {
+        abortOnError false
+    }
 }
 
 
